@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6oy22scyavkg"]
+
+[ext_resource type="Script" path="res://scripts/jump_orb.gd" id="1_2busv"]
+[ext_resource type="Texture2D" uid="uid://ifxnaw1myuby" path="res://assets/sprites/jump_orb.png" id="1_s24xk"]
+[ext_resource type="PackedScene" uid="uid://bdrnpjsfft0ik" path="res://scenes/bounce_area.tscn" id="3_udi85"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_040f1"]
+radius = 7.33782
+
+[node name="Jump_Orb" type="Node2D"]
+position = Vector2(0.155, -0.544)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_2busv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.155, -0.544)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_s24xk")
+
+[node name="BounceArea" parent="." instance=ExtResource("3_udi85")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BounceArea"]
+position = Vector2(-0.19375, 0.68)
+shape = SubResource("CircleShape2D_040f1")

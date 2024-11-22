@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdrnpjsfft0ik"]
+
+[ext_resource type="Script" path="res://scripts/bounce_area.gd" id="1_hkn55"]
+
+[node name="BounceArea" type="Area2D"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_hkn55")
+
+[connection signal="body_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_exited" from="." to="." method="_on_area_exited"]

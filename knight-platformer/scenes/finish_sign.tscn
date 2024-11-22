@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl57u25r2km4v"]
+
+[ext_resource type="TileSet" uid="uid://c8ldd1v1b631k" path="res://assets/sprites/world_tileset.tres" id="1_a87jh"]
+[ext_resource type="Script" path="res://scripts/finish_sign.gd" id="1_vbgyx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x023x"]
+size = Vector2(16, 15)
+
+[node name="FinishSign" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_vbgyx")
+
+[node name="AnimatedSprite2D" type="TileMapLayer" parent="."]
+position = Vector2(8, 6)
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 8, 0, 3, 0, 0, 0)
+tile_set = ExtResource("1_a87jh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_x023x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

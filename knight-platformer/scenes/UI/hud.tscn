@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt1qy83s6wp0i"]
+
+[ext_resource type="Texture2D" uid="uid://b5p7wk5mk1fow" path="res://assets/sprites/stillcoin.png" id="1_n7lwc"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_qgt77"]
+[ext_resource type="FontFile" uid="uid://cxjudikn627o3" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_31x7d"]
+
+[node name="HUD" type="Control" groups=["hud"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qgt77")
+
+[node name="CoinTexture" type="TextureRect" parent="."]
+layout_mode = 1
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
+texture = ExtResource("1_n7lwc")
+
+[node name="CoinLabel" type="Label" parent="CoinTexture"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.197
+anchor_top = 0.612
+anchor_right = 0.197
+anchor_bottom = 0.612
+offset_left = 28.12
+offset_top = -11.48
+offset_right = 140.12
+offset_bottom = 11.52
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_31x7d")
+theme_override_font_sizes/font_size = 16
+text = "Coins: 0"
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.197
+anchor_top = 0.612
+anchor_right = 0.197
+anchor_bottom = 0.612
+offset_left = -174.944
+offset_top = -340.576
+offset_right = -58.944
+offset_bottom = -317.576
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_31x7d")
+theme_override_font_sizes/font_size = 16
+text = "Score: 0"
