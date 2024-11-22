@@ -12,6 +12,16 @@ If you open it in Godot and it asks for a Wakatime API key, simply leave it blan
 
 # Controls
 
+Move left - "A" or "Left Arrow"
+
+Move right - "D" or "Right Arrow"
+
+Jump - "W" or "Space" or "Up Arrow"
+
+Pause Menu - "Esc"
+
+Roll - "Shift"
+
 # Disclaimer/Credits
 The only asset I made myself was the jump orb, everything else is from here: 
 https://brackeysgames.itch.io/brackeys-platformer-bundle
