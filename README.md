@@ -26,4 +26,4 @@ Roll - "Shift"
 The only asset I made myself was the jump orb, everything else is from here: 
 https://brackeysgames.itch.io/brackeys-platformer-bundle
 
-I suck at making assets and was more focused on the coding side so I used these assets to make a game to learn how Godot works.
+I suck at making assets and was more focused on the coding side so I used these assets so I could focus on learning Godot.
